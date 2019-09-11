@@ -10,7 +10,15 @@
 </template>
 <script>
   export default {
-    props: ['icon', 'iconPosition'],
+    props: {
+      icon: {
+        type: String
+      },
+      iconPosition: {
+        type: String,
+        default: 'left'
+      }
+    }
 
   }
 </script>
