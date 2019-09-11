@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/wangyujie1207/Vue-test/issues"
   },
-  "homepage": "https://github.com/wangyujie1207/Vue-test#readme"
+  "homepage": "https://github.com/wangyujie1207/Vue-test#readme",
+  "dependencies": {
+    "vue": "^2.6.10"
+  }
 }
