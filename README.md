@@ -28,11 +28,6 @@ npm i --save gulu
 import {Button, ButtonGroup, Icon} from 'vue-ui-test-1'
 import 'vue-ui-test-1/dist/index.css
 ```
-
-4. 引入svg symbols
-```markdown
-<script src="//at.alicdn.com/t/font_1405104_8evcsopq3ya.js"></script>
-```
 ## 文档
 
 ## 提问
