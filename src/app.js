@@ -12,17 +12,18 @@ new Vue({
   el: '#app',
   data() {
     return {
-      loading: false
+      loading: false,
+      message: ''
     }
   },
   created(){
-    setTimeout(() => {
-      let event = new Event('change');
-      let inputElement = this.$el.querySelector('input');
-      console.log(inputElement);
-      inputElement.dispatchEvent(event);
-      console.log('hi');
-    },3000)
+    // setTimeout(() => {
+    //   let event = new Event('change');
+    //   let inputElement = this.$el.querySelector('input');
+    //   console.log(inputElement);
+    //   inputElement.dispatchEvent(event);
+    //   console.log('hi');
+    // },3000)
   },
   methods: {
     inputChange(e){

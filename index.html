@@ -44,7 +44,8 @@
 <!--    <g-input value="张三"></g-input>-->
   </div>
   <div class="box">
-    <g-input value="张三" @change="inputChange"></g-input>
+    <g-input value="张三" @change="inputChange" v-model="message"></g-input>
+    {{message}}
   </div>
   <div class="box">
     <g-button icon="settings" icon-position="right" :loading="true">
