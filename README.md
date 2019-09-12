@@ -13,25 +13,25 @@
 使用本框架前, 请在css开启 border-box
 
 ```css
-    *, *::before, *::after { box-sizing: border-box; }
+*, *::before, *::after { box-sizing: border-box; }
 ```
 
 IE8及以上浏览器都支持此样式
 
 2. 安装
 ```markdown
-  npm i --save gulu
+npm i --save gulu
 ```
 
 3. 引入
 ```
-    import {Button, ButtonGroup, Icon} from 'vue-ui-test-1'
-    import 'vue-ui-test-1/dist/index.css
+import {Button, ButtonGroup, Icon} from 'vue-ui-test-1'
+import 'vue-ui-test-1/dist/index.css
 ```
 
 4. 引入svg symbols
 ```markdown
-    <script src="//at.alicdn.com/t/font_1405104_8evcsopq3ya.js"></script>
+<script src="//at.alicdn.com/t/font_1405104_8evcsopq3ya.js"></script>
 ```
 ## 文档
 
