@@ -3,49 +3,48 @@
     <slot></slot>
   </div>
 </template>
-
 <script>
   export default {
-    name: "g-row",
+    name: 'GuluRow',
     props: {
       gutter: {
         type: [Number, String]
       },
       align: {
         type: String,
-        validator(value){
-          return  ['left', 'right','center'].includes(value)
+        validator (value) {
+          return ['left', 'right', 'center'].indexOf(value) >= 0
         }
       }
     },
     computed: {
-      rowClass(){
-        let {align} = this;
-        return [align && `align-${align}`]
-      },
-      rowStyle() {
+      rowStyle () {
         let {gutter} = this;
         return {marginLeft: -gutter / 2 + 'px', marginRight: -gutter / 2 + 'px'}
+      },
+      rowClass () {
+        let {align} = this;
+        return [align && `align-${align}`]
       }
     },
-    mounted() {
-      this.$children.forEach(vm => {
+    mounted () {
+      this.$children.forEach((vm) => {
         vm.gutter = this.gutter
       })
     }
   }
 </script>
-
-<style lang="scss" scoped>
-  .row {
+<style scoped lang="scss">
+  .row{
     display: flex;
-    &.align-left{
+    flex-wrap: wrap;
+    &.align-left {
       justify-content: flex-start;
     }
-    &.align-right{
+    &.align-right {
       justify-content: flex-end;
     }
-    &.align-center{
+    &.align-center {
       justify-content: center;
     }
   }

@@ -28,18 +28,18 @@
     body {
       font-size: var(--font-size);
     }
+    .demo{
+      background-color: #dddddd;
+      border: 1px solid #666666;
+      height: 100px;
+    }
   </style>
 </head>
 <body>
 <div id="app">
   <g-row gutter="20">
-    <g-col span="8">1</g-col>
-    <g-col span="8">2</g-col>
-    <g-col span="8">3</g-col>
-  </g-row>
-  <g-row>
-    <g-col :span="2">1</g-col>
-    <g-col :span="22">2</g-col>
+    <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}"><div class="demo"></div></g-col>
+
   </g-row>
   <hr>
   <div class="box">
