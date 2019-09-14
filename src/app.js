@@ -34,7 +34,15 @@ new Vue({
     }
   },
   created(){
-    this.$toast('我是message')
+    this.$toast('我是message',{
+      enableHtml: false,
+      closeButton: {
+        text: '知道了',
+        callback() {
+          console.log('用户说他知道了');
+        }
+      }
+    })
     // setTimeout(() => {
     //   let event = new Event('change');
     //   let inputElement = this.$el.querySelector('input');
