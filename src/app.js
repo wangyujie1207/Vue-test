@@ -10,6 +10,8 @@ import Header from './header';
 import Footer from './footer';
 import Content from './content';
 import Slider from './slider';
+import Toast from './toast';
+import Plugin from './plugin';
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
 Vue.component('g-button-group', ButtonGroup);
@@ -21,7 +23,8 @@ Vue.component('g-header', Header);
 Vue.component('g-footer', Footer);
 Vue.component('g-slider', Slider);
 Vue.component('g-content', Content);
-
+Vue.component('g-toast', Toast);
+Vue.use(Plugin);
 new Vue({
   el: '#app',
   data() {
@@ -31,6 +34,7 @@ new Vue({
     }
   },
   created(){
+    this.$toast('我是message')
     // setTimeout(() => {
     //   let event = new Event('change');
     //   let inputElement = this.$el.querySelector('input');
