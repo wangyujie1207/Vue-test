@@ -5,12 +5,22 @@ import ButtonGroup from './button-group';
 import Input from './input';
 import Row from './row';
 import Col from './col';
+import Layout from './layout';
+import Header from './header';
+import Footer from './footer';
+import Content from './content';
+import Slider from './slider';
 Vue.component('g-button', Button);
 Vue.component('g-icon', Icon);
 Vue.component('g-button-group', ButtonGroup);
 Vue.component('g-input', Input);
 Vue.component('g-row', Row);
 Vue.component('g-col', Col);
+Vue.component('g-layout', Layout);
+Vue.component('g-header', Header);
+Vue.component('g-footer', Footer);
+Vue.component('g-slider', Slider);
+Vue.component('g-content', Content);
 
 new Vue({
   el: '#app',

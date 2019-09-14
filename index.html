@@ -29,40 +29,21 @@
       font-size: var(--font-size);
     }
     .demo{
-      background-color: #dddddd;
       border: 1px solid #666666;
-      height: 100px;
+      min-height: 100px;
     }
   </style>
 </head>
 <body>
 <div id="app">
-  <g-row gutter="20">
-    <g-col span="24" :ipad="{span:12}" :narrow-pc="{span:8}"><div class="demo"></div></g-col>
-
-  </g-row>
-  <hr>
-  <div class="box">
-    <g-input value="张三" @change="inputChange" v-model="message"></g-input>
-    {{message}}
-  </div>
-  <div class="box">
-    <g-button icon="settings" icon-position="right" :loading="true">
-      按钮
-    </g-button>
-    <g-button icon="settings" :loading="loading" @click="loading = !loading">
-      按钮
-    </g-button>
-    <g-button icon="settings" icon-position="right">
-      {{loading}}
-    </g-button>
-    <g-button-group>
-      <g-button icon="left">上一页</g-button>
-      <g-button>更多</g-button>
-      <g-button icon="right" icon-position="right">下一页</g-button>
-    </g-button-group>
-    <div id="test"></div>
-  </div>
+  <g-layout style="height: 100vh;">
+    <g-slider>slider</g-slider>
+    <g-layout>
+      <g-header class="demo">header</g-header>
+      <g-content class="demo">content</g-content>
+      <g-footer class="demo">footer</g-footer>
+    </g-layout>
+  </g-layout>
 </div>
 
 <script src="./src/app.js"></script>
