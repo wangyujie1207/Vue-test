@@ -2,8 +2,8 @@ const expect = chai.expect;
 import Vue from 'vue'
 import Toast from '../src/toast'
 
-Vue.config.productionTip = false
-Vue.config.devtools = false
+Vue.config.productionTip = false;
+Vue.config.devtools = false;
 
 describe('Toast', () => {
   it('存在.', () => {
@@ -25,7 +25,7 @@ describe('Toast', () => {
         done();
       })
     });
-    it('接受 closeButton', () => {
+    it('接受 closeButton', (done) => {
       const div = document.createElement('div');
       document.body.appendChild(div);
       const Constructor = Vue.extend(Toast);
@@ -40,10 +40,14 @@ describe('Toast', () => {
       }).$mount(div);
       let closeButton = vm.$el.querySelector('.close');
       expect(closeButton.textContent.trim()).to.equal('关闭吧');
-      console.log(closeButton.click);
-      closeButton.click()
-      expect(callback).to.have.been.called;
-    })
+      // console.log(closeButton.click);
+      setTimeout(() => {
+        closeButton.click();
+        expect(callback).to.have.been.called;
+        done();
+      },200)
+
+    });
     it('接受 enableHtml 属性', () => {
       const div = document.createElement('div');
       document.body.appendChild(div);
@@ -66,7 +70,7 @@ describe('Toast', () => {
         propsData: {
           position: 'bottom'
         }
-      }).$mount(div)
+      }).$mount(div);
       // console.log(vm.$el.classList)
       expect(vm.$el.classList.contains('position-bottom')).to.equal(true);
     });

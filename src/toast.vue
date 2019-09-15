@@ -21,7 +21,7 @@
       autoClose: {
         type: [Boolean, Number],
         default: 5,
-        validator(value){
+        validator(value) {
           return value === false || typeof value === 'number';
         }
       },
@@ -58,10 +58,8 @@
     methods: {
       updateStyle() {
         this.$nextTick(() => {
-          if(this.$refs.line){
-            this.$refs.line.style.height =
-              `${this.$refs.toast.getBoundingClientRect().height}px`
-          }
+          this.$refs.line.style.height =
+            `${this.$refs.toast.getBoundingClientRect().height}px`
         })
       },
       execAutoClose() {
