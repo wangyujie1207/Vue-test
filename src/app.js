@@ -34,16 +34,7 @@ new Vue({
     }
   },
   created(){
-    this.$toast('我是message',{
-      position: 'middle',
-      enableHtml: false,
-      closeButton: {
-        text: '知道了',
-        callback() {
-          console.log('用户说他知道了');
-        }
-      }
-    })
+
     // setTimeout(() => {
     //   let event = new Event('change');
     //   let inputElement = this.$el.querySelector('input');
@@ -53,8 +44,17 @@ new Vue({
     // },3000)
   },
   methods: {
-    inputChange(e){
-      console.log(e.target.value);
+    showToast(){
+      this.$toast('我是message',{
+        position: 'top',
+        enableHtml: false,
+        closeButton: {
+          text: '知道了',
+          callback() {
+            console.log('用户说他知道了');
+          }
+        }
+      })
     }
   }
 });
