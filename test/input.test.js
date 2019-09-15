@@ -33,7 +33,7 @@ describe('Input', () => {
         }
       }).$mount();
       const inputElement = vm.$el.querySelector('input');
-      console.log(inputElement);
+      // console.log(inputElement);
       expect(inputElement.readOnly).to.equal(true);
     });
 
