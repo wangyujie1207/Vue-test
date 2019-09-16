@@ -41,7 +41,6 @@ describe('TabsItem', () => {
         disabled: true
       }
     }).$mount(div);
-    console.log(vm.$el.outerHTML);
     expect(vm.$el.classList.contains('disabled')).to.equal(true);
     const callback = sinon.fake();
     vm.$on('click', callback);
