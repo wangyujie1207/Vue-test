@@ -34,15 +34,29 @@
 </head>
 <body>
 <div id="app">
+<!--<g-tabs :selected="selectedTab" @update:selected="selectedTab = $event">-->
+<g-tabs :selected.sync="selectedTab" direction="horizontal">
+  <g-tabs-head>
+    <template slot="actions">
+      <button>actions</button>
+    </template>
+    <g-tabs-item name="woman">美女</g-tabs-item>
+    <g-tabs-item name="finance">财经</g-tabs-item>
+    <g-tabs-item name="sports">体育</g-tabs-item>
+  </g-tabs-head>
+  <g-tabs-body>
+    <g-tabs-pane name="woman">
+      美女相关资讯
+    </g-tabs-pane>
+    <g-tabs-pane name="finance" :disabled="false">
+      财经相关资讯
+    </g-tabs-pane>
+    <g-tabs-pane name="sports">
+      体育相关资讯
+    </g-tabs-pane>
+  </g-tabs-body>
+</g-tabs>
 <button @click="showToast">点我</button>
-<!--  <g-layout style="height: 100vh;">-->
-<!--    <g-slider>slider</g-slider>-->
-<!--    <g-layout>-->
-<!--      <g-header class="demo">header</g-header>-->
-<!--      <g-content class="demo">content</g-content>-->
-<!--      <g-footer class="demo">footer</g-footer>-->
-<!--    </g-layout>-->
-<!--  </g-layout>-->
 </div>
 
 <script src="./src/app.js"></script>
