@@ -17,9 +17,7 @@
 
     },
     created() {
-      this.eventBus.$on('update:selected', (name) => {
-        console.log(name)
-      })
+
     },
   }
 </script>
